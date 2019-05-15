@@ -1,6 +1,12 @@
-require "install_gem_local/version"
+# frozen_string_literal: true
+
+require 'install_gem_local/version'
 
 module InstallGemLocal
-  class Error < StandardError; end
-  # Your code goes here...
+  class App < Thor
+    desc 'usage, list all commands'
+    def usage
+      puts 'all commands'
+    end
+  end
 end
