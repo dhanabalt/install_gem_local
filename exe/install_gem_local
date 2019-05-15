@@ -2,3 +2,9 @@
 # frozen_string_literal: true
 
 require_relative '../lib/install_gem_local'
+
+if ARGV[0].nil?
+  InstallGemLocal::Navigation.start
+else
+  InstallGemLocal::App.start(ARGV)
+end

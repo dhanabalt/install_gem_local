@@ -5,5 +5,11 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in install_gem.gemspec
 gemspec
 
+# cops
 gem 'rubocop'
+
+# CLI
 gem 'thor'
+
+# CLI options
+gem 'downup'
