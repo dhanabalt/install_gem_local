@@ -2,6 +2,7 @@
 require 'thor'
 require 'downup'
 require 'awesome_print'
+require 'tty-command'
 
 require 'install_gem_local/version'
 require 'install_gem_local/navigation'

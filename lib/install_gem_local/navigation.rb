@@ -6,8 +6,8 @@ module InstallGemLocal
           "a" => {"value" => 'remove', "display" => 'Remove old version'},
           "b" => {"value" => 'build', "display" => 'Build new version'},
           "c" => {"value" => 'install', "display" => 'Install new version'},
-          "d" => {"value" => 'all_activity', "display" => 'Remove old version, build and install the new version'},
-          "/" => {"value" => "aoa", "display" => "Exit"}
+          "d" => {"value" => 'aoa', "display" => 'Remove old version, build and install the new version'},
+          "/" => {"value" => "exit", "display" => "Exit"}
         }
 
         selection = Downup::Base.new(flash_message: 'Select Action', options: options).prompt
