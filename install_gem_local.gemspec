@@ -1,17 +1,18 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "install_gem/version"
+require "install_gem_local/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "install_gem"
-  spec.version       = InstallGem::VERSION
+  spec.name          = "install_gem_local"
+  spec.name          = "install_gem_local"
+  spec.version       = InstallGemLocal::VERSION
   spec.authors       = ["Dhanabal T"]
   spec.email         = ["vel.dhanabal@gmail.com"]
 
   spec.summary       = %q{to build and install the gem in my local}
   spec.description   = %q{to build and install the gem in my local}
-  spec.homepage      = "https://github.com/dhanabalt/install_gem"
+  spec.homepage      = "https://github.com/dhanabalt/install_gem_local"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +21,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/dhanabalt/install_gem"
-    spec.metadata["changelog_uri"] = "https://github.com/dhanabalt/install_gem"
+    spec.metadata["source_code_uri"] = "https://github.com/dhanabalt/install_gem_local"
+    spec.metadata["changelog_uri"] = "https://github.com/dhanabalt/install_gem_local"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

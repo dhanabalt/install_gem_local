@@ -1,6 +1,6 @@
-require "install_gem/version"
+require "install_gem_local/version"
 
-module InstallGem
+module InstallGemLocal
   class Error < StandardError; end
   # Your code goes here...
 end

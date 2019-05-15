@@ -1,3 +1,3 @@
-module InstallGem
+module InstallGemLocal
   VERSION = "0.1.0"
 end

@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "install_gem"
+require "install_gem_local"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

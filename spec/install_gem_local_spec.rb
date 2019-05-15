@@ -1,6 +1,6 @@
-RSpec.describe InstallGem do
+RSpec.describe InstallGemLocal do
   it "has a version number" do
-    expect(InstallGem::VERSION).not_to be nil
+    expect(InstallGemLocal::VERSION).not_to be nil
   end
 
   it "does something useful" do
