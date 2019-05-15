@@ -3,13 +3,27 @@ module InstallGemLocal
     class << self
       def start
         options = {
-          a: {value: 'All activity', display: 'Remove old version, build and install the new version'},
-          b: {value: 'remove', display: 'Remove old version'},
-          c: {value: 'build', display: 'Build new version'},
-          d: {value: 'install', display: 'Install new version'}
+          "a" => {"value" => 'remove', "display" => 'Remove old version'},
+          "b" => {"value" => 'build', "display" => 'Build new version'},
+          "c" => {"value" => 'install', "display" => 'Install new version'},
+          "d" => {"value" => 'all_activity', "display" => 'Remove old version, build and install the new version'},
+          "/" => {"value" => "aoa", "display" => "Exit"}
         }
 
-        puts Downup::Base.new(options: options).prompt
+        selection = Downup::Base.new(flash_message: 'Select Action', options: options).prompt
+
+        ap selection
+
+        case selection
+        when 'remove'
+          InstallGemLocal::Action.remove_gem
+        when 'build'
+          InstallGemLocal::Action.build_gem
+        when 'install'
+          InstallGemLocal::Action.install_gem
+        when 'aoa'
+          InstallGemLocal::Action.aoa
+        end
       end
     end
   end

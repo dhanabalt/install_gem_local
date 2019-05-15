@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 require 'thor'
-require 'install_gem_local/version'
 require 'downup'
+require 'awesome_print'
+
+require 'install_gem_local/version'
 require 'install_gem_local/navigation'
+require 'install_gem_local/action'
 
 module InstallGemLocal
   class App < Thor

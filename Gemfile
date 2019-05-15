@@ -13,3 +13,6 @@ gem 'thor'
 
 # CLI options
 gem 'downup'
+
+# pretty puts
+gem 'awesome_print'
