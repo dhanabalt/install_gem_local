@@ -7,15 +7,3 @@ gemspec
 
 # cops
 gem 'rubocop'
-
-# CLI
-gem 'thor'
-
-# CLI options
-gem 'downup'
-
-# pretty puts
-gem 'awesome_print'
-
-# Execute shell commands with pretty output
-gem 'tty-command'

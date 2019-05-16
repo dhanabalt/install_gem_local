@@ -27,4 +27,13 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+
+  # pretty puts
+  spec.add_dependency 'awesome_print', '~> 1.8', '>= 1.8.0'
+  # CLI options
+  spec.add_dependency 'downup', '~> 0.11', '>= 0.11.7'
+  # CLI
+  spec.add_dependency 'thor', '~> 0.20', '>= 0.20.3'
+  # Execute shell commands with pretty output
+  spec.add_dependency 'tty-command', '~> 0.8', '>= 0.8.2'
 end
