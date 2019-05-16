@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module InstallGemLocal
   class Action
     class << self
@@ -28,10 +30,10 @@ module InstallGemLocal
 
       def copy_gem
         options = {
-          "a" => {"value" => 'desktop', "display" => 'Desktop'},
-          "b" => {"value" => 'downloads', "display" => 'Downloads'},
-          "c" => {"value" => 'documents', "display" => 'Documents'},
-          "/" => {"value" => "exit", "display" => "Exit"}
+          'a' => { 'value' => 'desktop', 'display' => 'Desktop' },
+          'b' => { 'value' => 'downloads', 'display' => 'Downloads' },
+          'c' => { 'value' => 'documents', 'display' => 'Documents' },
+          '/' => { 'value' => 'exit', 'display' => 'Exit' }
         }
 
         selection = Downup::Base.new(flash_message: 'Choose Folder To Copy',
