@@ -1,6 +1,7 @@
 module InstallGemLocal
   module PushGem
     def push_gem
+      build_gem
       puts '-----------------------------'
       puts ''
       files_exists = file_names
