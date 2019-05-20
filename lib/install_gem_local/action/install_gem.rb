@@ -14,6 +14,8 @@ module InstallGemLocal
     end
 
     def install_gem_from_path(file_name)
+      return if file_name == 'exit'
+
       tty_command.run("gem install #{file_name}")
     end
   end

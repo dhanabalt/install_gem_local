@@ -30,14 +30,16 @@ module InstallGemLocal
         file.entries
       end
 
-      def multiple_version_selection
-        options = {}
+      def multiple_version_selection(include_all: false)
+        options =
+          include_all ? { '*' => { 'value' => 'all', 'display' => 'All Versions' } } : {}
         file_names.each_with_index do |file_name, index|
           options[('a'..'z').to_a[index]] = { 'value' => file_name, 'display' => file_name }
         end
         options['/'] = { 'value' => 'exit', 'display' => 'Exit'}
         Downup::Base.new(flash_message: 'Choose which version',
                          options: options).prompt
+
       end
     end
   end

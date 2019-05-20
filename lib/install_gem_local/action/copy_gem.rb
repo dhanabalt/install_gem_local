@@ -25,6 +25,8 @@ module InstallGemLocal
     end
 
     def copy_file_to_path(file_name)
+      return if file_name == 'exit'
+
       case choose_copy_folder
       when 'desktop'
         tty_command.run("cp #{file_name} ~/Desktop")
