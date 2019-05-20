@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 module InstallGemLocal
   module CopyGem
     def choose_copy_folder
       options = {
-          'a' => { 'value' => 'desktop', 'display' => 'Desktop' },
-          'b' => { 'value' => 'downloads', 'display' => 'Downloads' },
-          'c' => { 'value' => 'documents', 'display' => 'Documents' },
-          '/' => { 'value' => 'exit', 'display' => 'Exit' }
+        'a' => { 'value' => 'desktop', 'display' => 'Desktop' },
+        'b' => { 'value' => 'downloads', 'display' => 'Downloads' },
+        'c' => { 'value' => 'documents', 'display' => 'Documents' },
+        '/' => { 'value' => 'exit', 'display' => 'Exit' }
       }
 
       Downup::Base.new(flash_message: 'Choose Folder To Copy',

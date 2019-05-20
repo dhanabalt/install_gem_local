@@ -36,10 +36,9 @@ module InstallGemLocal
         file_names.each_with_index do |file_name, index|
           options[('a'..'z').to_a[index]] = { 'value' => file_name, 'display' => file_name }
         end
-        options['/'] = { 'value' => 'exit', 'display' => 'Exit'}
+        options['/'] = { 'value' => 'exit', 'display' => 'Exit' }
         Downup::Base.new(flash_message: 'Choose which version',
                          options: options).prompt
-
       end
     end
   end

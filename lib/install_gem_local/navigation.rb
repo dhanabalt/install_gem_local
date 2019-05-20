@@ -33,7 +33,7 @@ module InstallGemLocal
           InstallGemLocal::Action.till_copy
         end
 
-        #InstallGemLocal::Navigation.start unless selection == 'exit'
+        # InstallGemLocal::Navigation.start unless selection == 'exit'
       rescue StandardError => e
         ap e
         ap 'Something Wrong! Try again!'

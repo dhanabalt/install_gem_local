@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module InstallGemLocal
   module InstallGem
     def install_gem
