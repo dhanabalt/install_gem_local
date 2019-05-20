@@ -28,6 +28,8 @@ module InstallGemLocal
           InstallGemLocal::Action.install_gem
         when 'copy_gem'
           InstallGemLocal::Action.copy_gem
+        when 'push_gem'
+          InstallGemLocal::Action.push_gem
         when 'till_install'
           InstallGemLocal::Action.till_install
         when 'till_copy'
