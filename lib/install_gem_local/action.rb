@@ -38,8 +38,10 @@ module InstallGemLocal
           options[('a'..'z').to_a[index]] = { 'value' => file_name, 'display' => file_name }
         end
         options['/'] = { 'value' => 'exit', 'display' => 'Exit' }
-        Downup::Base.new(flash_message: 'Choose which version',
-                         options: options).prompt
+        InstallGemLocal::Helper.prompt_options(
+          flash_message: 'Choose which version',
+          options: options
+        )
       end
     end
   end

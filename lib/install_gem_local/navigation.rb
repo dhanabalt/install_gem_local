@@ -5,9 +5,9 @@ module InstallGemLocal
     class << self
       def start
         options = {
-          'a' => { 'value' => 'remove', 'display' => 'Remove old version' },
-          'b' => { 'value' => 'build', 'display' => 'Build new version' },
-          'c' => { 'value' => 'install', 'display' => 'Install new version' },
+          'a' => { 'value' => 'remove_gem', 'display' => 'Remove old version' },
+          'b' => { 'value' => 'build_gem', 'display' => 'Build new version' },
+          'c' => { 'value' => 'install_gem', 'display' => 'Install new version' },
           'd' => { 'value' => 'copy_gem', 'display' => 'Copy gem to folder' },
           'e' => { 'value' => 'push_gem', 'display' => 'Build the latest version and push the gem' },
           'f' => { 'value' => 'till_install', 'display' => 'Remove old version, build and install the new version' },
@@ -15,28 +15,19 @@ module InstallGemLocal
           '/' => { 'value' => 'exit', 'display' => 'Exit' }
         }
 
-        selection = Downup::Base.new(flash_message: 'Select Action', options: options).prompt
+        #selection = Downup::Base.new(flash_message: 'Select Action', options: options).prompt
+        selection = InstallGemLocal::Helper.prompt_options(
+          flash_message: 'Select Action',
+          options: options
+        )
 
         ap selection
 
-        case selection
-        when 'remove'
-          InstallGemLocal::Action.remove_gem
-        when 'build'
-          InstallGemLocal::Action.build_gem
-        when 'install'
-          InstallGemLocal::Action.install_gem
-        when 'copy_gem'
-          InstallGemLocal::Action.copy_gem
-        when 'push_gem'
-          InstallGemLocal::Action.push_gem
-        when 'till_install'
-          InstallGemLocal::Action.till_install
-        when 'till_copy'
-          InstallGemLocal::Action.till_copy
+        unless selection == 'exit'
+          InstallGemLocal::Action.send(selection.to_sym)
+          InstallGemLocal::Navigation.start unless selection == 'exit'
         end
 
-        # InstallGemLocal::Navigation.start unless selection == 'exit'
       rescue StandardError => e
         ap e
         ap 'Something Wrong! Try again!'

@@ -10,8 +10,10 @@ module InstallGemLocal
         '/' => { 'value' => 'exit', 'display' => 'Exit' }
       }
 
-      Downup::Base.new(flash_message: 'Choose Folder To Copy',
-                       options: options).prompt
+      InstallGemLocal::Helper.prompt_options(
+        flash_message: 'Choose Folder To Copy',
+        options: options
+      )
     end
 
     def copy_gem
