@@ -6,6 +6,7 @@ module InstallGemLocal
     extend InstallGemLocal::CopyGem
     extend InstallGemLocal::RemoveGem
     extend InstallGemLocal::BuildGem
+    extend InstallGemLocal::PushGem
 
     class << self
       def till_install

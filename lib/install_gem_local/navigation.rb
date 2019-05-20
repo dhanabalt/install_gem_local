@@ -9,8 +9,9 @@ module InstallGemLocal
           'b' => { 'value' => 'build', 'display' => 'Build new version' },
           'c' => { 'value' => 'install', 'display' => 'Install new version' },
           'd' => { 'value' => 'copy_gem', 'display' => 'Copy gem to folder' },
-          'e' => { 'value' => 'till_install', 'display' => 'Remove old version, build and install the new version' },
-          'f' => { 'value' => 'till_copy', 'display' => 'Remove old version, build, install and copy the new version' },
+          'e' => { 'value' => 'push_gem', 'display' => 'Build the latest version and push the gem' },
+          'f' => { 'value' => 'till_install', 'display' => 'Remove old version, build and install the new version' },
+          'g' => { 'value' => 'till_copy', 'display' => 'Remove old version, build, install and copy the new version' },
           '/' => { 'value' => 'exit', 'display' => 'Exit' }
         }
 
