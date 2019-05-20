@@ -5,9 +5,7 @@ require 'downup'
 require 'awesome_print'
 require 'tty-command'
 
-require 'install_gem_local/version'
-require 'install_gem_local/navigation'
-require 'install_gem_local/action'
+Dir[File.join(File.expand_path("..",__FILE__), 'install_gem_local', '**/*.rb')].each {|f| require f}
 
 module InstallGemLocal
   class App < Thor
