@@ -18,11 +18,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install install_gem
+    $ gem install install_gem_local
 
 ## Usage
 
-TODO: Write usage instructions here
+run install_gem_local
+it will fetch you the options
 
 ## Development
 
