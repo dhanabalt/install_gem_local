@@ -15,7 +15,6 @@ module InstallGemLocal
           '/' => { 'value' => 'exit', 'display' => 'Exit' }
         }
 
-        #selection = Downup::Base.new(flash_message: 'Select Action', options: options).prompt
         selection = InstallGemLocal::Helper.prompt_options(
           flash_message: 'Select Action',
           options: options
@@ -25,7 +24,7 @@ module InstallGemLocal
 
         unless selection == 'exit'
           InstallGemLocal::Action.send(selection.to_sym)
-          InstallGemLocal::Navigation.start unless selection == 'exit'
+          #InstallGemLocal::Navigation.start unless selection == 'exit'
         end
 
       rescue StandardError => e
