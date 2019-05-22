@@ -16,5 +16,10 @@ module InstallGemLocal
   class App < Thor
     desc 'usage', 'list all commands'
     def usage; end
+
+    desc 'methods', 'list all methods description'
+    def methods
+      InstallGemLocal::Utilization.show_methods
+    end
   end
 end
