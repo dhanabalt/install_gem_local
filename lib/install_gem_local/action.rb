@@ -23,7 +23,7 @@ module InstallGemLocal
       private
 
       def tty_command
-        @tty_command ||= TTY::Command.new
+        @tty_command ||= TTY::Command.new(uuid: false, printer: :quiet)
       end
 
       def file_names

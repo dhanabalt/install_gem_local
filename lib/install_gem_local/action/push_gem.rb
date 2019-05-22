@@ -2,8 +2,8 @@ module InstallGemLocal
   module PushGem
     def push_gem
       build_gem
-      puts '-----------------------------'
       puts ''
+      puts 'Push Gem'.blue
       files_exists = file_names
       if files_exists.count > 1
         push_gem_from_path(multiple_version_selection)

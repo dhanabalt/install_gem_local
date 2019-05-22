@@ -17,6 +17,8 @@ module InstallGemLocal
     end
 
     def copy_gem
+      puts ''
+      puts 'Copy Gem'.green
       files_exists = file_names
 
       if files_exists.count > 1
