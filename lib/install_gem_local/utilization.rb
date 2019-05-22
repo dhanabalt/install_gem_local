@@ -1,31 +1,33 @@
 module InstallGemLocal
   class Utilization
-    def show_methods
-      long_desc = <<-STR
-      *******************************************
+    class << self
+      def show_methods
+        long_desc = <<-STR
+*******************************************
 
-      CLI to manage your own gems
+CLI to manage your own gems
 
-      *******************************************
-      Available Methods
-      *******************************************  
-      
-      Remove old Gem version
+*******************************************
+Available Methods
+*******************************************  
 
-      Build new Gem version
+Remove old Gem version
 
-      Install new Gem version
+Build new Gem version
 
-      Copy gem to folder
+Install new Gem version
 
-      Build the latest version and push the gem
+Copy gem to folder
 
-      Remove old version, build and install the new version
+Build the latest version and push the gem
 
-      Remove old version, build, install and copy the new version
-  
-      *******************************************
-      STR
+Remove old version, build and install the new version
+
+Remove old version, build, install and copy the new version
+
+*******************************************
+        STR
+      end
     end
   end
 end
