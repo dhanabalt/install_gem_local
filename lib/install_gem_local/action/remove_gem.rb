@@ -4,14 +4,14 @@ module InstallGemLocal
   module RemoveGem
     def remove_gem
       puts ''
-      puts 'Remove Gem'.red
+      puts I18n.t('action.remove_gem.puts_line').red
       file_exists = file_names
       if file_exists.count > 1
         remove_file_from_path(multiple_version_selection(include_all: true))
       elsif file_exists.count == 1
         remove_file_from_path(file_exists.first)
       else
-        ap 'Gem not exist'
+        ap I18n.t(:gem_not_exist)
       end
     end
 

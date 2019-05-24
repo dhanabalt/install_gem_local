@@ -1,0 +1,26 @@
+en:
+  gem_not_exist: 'Gem not exist'
+  gemspec_not_exist: 'Gemspec not exist'
+  choose_copy_folder: 'Choose Folder to Copy'
+  choose_version: 'Choose Version'
+  something_wrong: 'Something Wrong! Try again!'
+  action:
+    remove_gem:
+      puts_line: 'Remove Gem'
+      display: 'Remove old version'
+    build_gem:
+      puts_line: 'Build Gem'
+      display: 'Build new version'
+    install_gem:
+      puts_line: 'Install Gem'
+      display: 'Install new version'
+    copy_gem:
+      puts_line: 'Copy Gem'
+      display: 'Copy gem to folder'
+    push_gem:
+      puts_line: 'Push Gem'
+      display: 'Build the latest version and push the gem'
+    till_install:
+      display: 'Remove old version, build and install the new version'
+    till_copy:
+      display: 'Remove old version, build, install and copy the new version'

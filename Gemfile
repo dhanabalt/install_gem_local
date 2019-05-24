@@ -9,4 +9,3 @@ gemspec
 gem 'rubocop'
 
 gem 'i18n'
-gem 'tty-command'

@@ -3,14 +3,14 @@ module InstallGemLocal
     def push_gem
       till_install
       puts ''
-      puts 'Push Gem'.blue
+      puts I18n.t('action.push_gem.puts_line').blue
       files_exists = file_names
       if files_exists.count > 1
         push_gem_from_path(multiple_version_selection)
       elsif files_exists.count == 1
         push_gem_from_path(files_exists.first)
       else
-        ap 'Gem not exist'
+        ap I18n.t(:gem_not_exist)
       end
     end
 
