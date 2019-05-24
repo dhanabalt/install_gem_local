@@ -16,7 +16,7 @@ module InstallGemLocal
         }
 
         selection = InstallGemLocal::Helper.prompt_options(
-          flash_message: 'Select Action',
+          flash_message: InstallGemLocal::Helper.flash_message(title: 'Select Action'),
           options: options
         )
 
@@ -24,7 +24,7 @@ module InstallGemLocal
 
         unless selection == 'exit'
           InstallGemLocal::Action.send(selection.to_sym)
-          #InstallGemLocal::Navigation.start unless selection == 'exit'
+          #InstallGemLocal::Navigation.start
         end
 
       rescue StandardError => e

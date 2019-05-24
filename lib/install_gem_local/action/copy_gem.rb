@@ -11,7 +11,7 @@ module InstallGemLocal
       }
 
       InstallGemLocal::Helper.prompt_options(
-        flash_message: 'Choose Folder To Copy',
+        flash_message: InstallGemLocal::Helper.flash_message(title: 'Choose Folder To Copy'),
         options: options
       )
     end

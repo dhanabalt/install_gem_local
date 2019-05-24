@@ -10,6 +10,18 @@ module InstallGemLocal
           flash_color: flash_color,
         ).prompt
       end
+
+      def flash_message(title: "")
+        message = <<-STR
+    █████   ███████   █ 
+      █     █         █
+      █     █         █
+      █     █   ███   █
+      █     █     █   █
+    █████   ███████   ███████ #{title}
+        STR
+      end
+
     end
   end
 end
