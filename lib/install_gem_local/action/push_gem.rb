@@ -1,7 +1,7 @@
 module InstallGemLocal
   module PushGem
     def push_gem
-      build_gem
+      till_install
       puts ''
       puts 'Push Gem'.blue
       files_exists = file_names
