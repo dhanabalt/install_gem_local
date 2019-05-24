@@ -7,5 +7,3 @@ gemspec
 
 # cops
 gem 'rubocop'
-
-gem 'i18n'
