@@ -14,10 +14,10 @@ module InstallGemLocal
       def flash_message(title: "")
         message = <<-STR
     █████   ███████   █ 
-      █     █         █
-      █     █         █
-      █     █   ███   █
-      █     █     █   █
+      █     ██        █
+      █     ██        █
+      █     ██  ███   █
+      █     ██    █   █
     █████   ███████   ███████ #{title}
         STR
       end

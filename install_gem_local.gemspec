@@ -35,5 +35,5 @@ Gem::Specification.new do |spec|
   # CLI
   spec.add_dependency 'thor', '~> 0.20', '>= 0.20.3'
   # Execute shell commands with pretty output
-  spec.add_dependency 'tty-command', '~> 0.8', '>= 0.8.2'
+  #spec.add_dependency 'tty-command', '~> 0.8', '>= 0.8.2'
 end
