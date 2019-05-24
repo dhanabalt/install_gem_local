@@ -13,6 +13,7 @@ require 'install_gem_local/action/copy_gem'
 require 'install_gem_local/action/push_gem'
 Dir[File.join(File.expand_path(__dir__), 'install_gem_local', '**/*.rb')].each { |f| require f }
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
+I18n.config.available_locales = :en
 
 module InstallGemLocal
   class App < Thor
