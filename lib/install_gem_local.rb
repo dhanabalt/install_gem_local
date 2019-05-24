@@ -6,14 +6,15 @@ require 'awesome_print'
 require 'tty-command'
 require 'i18n'
 
+I18n.config.available_locales = :en
+I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
+
 require 'install_gem_local/action/install_gem'
 require 'install_gem_local/action/build_gem'
 require 'install_gem_local/action/remove_gem'
 require 'install_gem_local/action/copy_gem'
 require 'install_gem_local/action/push_gem'
 Dir[File.join(File.expand_path(__dir__), 'install_gem_local', '**/*.rb')].each { |f| require f }
-I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
-I18n.config.available_locales = :en
 
 module InstallGemLocal
   class App < Thor
