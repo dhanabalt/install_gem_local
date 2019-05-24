@@ -33,7 +33,10 @@ module InstallGemLocal
     def copy_file_to_path(file_name)
       return if file_name == 'exit'
 
-      case choose_copy_folder
+      folder_name = choose_copy_folder
+      puts "Copying gem to #{folder_name}"
+
+      case folder_name
       when 'desktop'
         tty_command.run("cp #{file_name} ~/Desktop")
       when 'downloads'

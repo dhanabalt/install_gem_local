@@ -20,8 +20,6 @@ module InstallGemLocal
           options: options
         )
 
-        ap selection
-
         unless selection == 'exit'
           InstallGemLocal::Action.send(selection.to_sym)
           #InstallGemLocal::Navigation.start
