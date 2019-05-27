@@ -6,8 +6,8 @@ require 'awesome_print'
 require 'tty-command'
 require 'i18n'
 
-I18n.config.available_locales = :en
 I18n.load_path << Dir[File.expand_path("config/locales") + "/*.yml"]
+I18n.config.available_locales = :en
 
 require 'install_gem_local/action/install_gem'
 require 'install_gem_local/action/build_gem'
