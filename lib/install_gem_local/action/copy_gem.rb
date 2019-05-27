@@ -11,14 +11,14 @@ module InstallGemLocal
       }
 
       InstallGemLocal::Helper.prompt_options(
-        flash_message: InstallGemLocal::Helper.flash_message(title: I18n.t('choose_copy_folder')),
+        flash_message: InstallGemLocal::Helper.flash_message(title: 'Choose Folder to Copy'),
         options: options
       )
     end
 
     def copy_gem
       puts ''
-      puts I18n.t('action.copy_gem.puts_line').green
+      puts 'Copy Gem'.green
       files_exists = file_names
 
       if files_exists.count > 1
@@ -26,7 +26,7 @@ module InstallGemLocal
       elsif files_exists.count == 1
         copy_file_to_path(files_exists.first)
       else
-        ap I18n.t(:gem_not_exist)
+        ap 'Gem not exist'
       end
     end
 

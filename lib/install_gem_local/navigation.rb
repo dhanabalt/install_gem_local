@@ -5,13 +5,13 @@ module InstallGemLocal
     class << self
       def start
         options = {
-          'a' => { 'value' => 'remove_gem', 'display' => I18n.t('action.remove_gem.display') },
-          'b' => { 'value' => 'build_gem', 'display' => I18n.t('action.build_gem.display') },
-          'c' => { 'value' => 'install_gem', 'display' => I18n.t('action.install_gem.display') },
-          'd' => { 'value' => 'copy_gem', 'display' => I18n.t('action.copy_gem.display') },
-          'e' => { 'value' => 'push_gem', 'display' => I18n.t('action.push_gem.display') },
-          'f' => { 'value' => 'till_install', 'display' => I18n.t('action.till_install.display') },
-          'g' => { 'value' => 'till_copy', 'display' => I18n.t('action.till_copy.display') },
+          'a' => { 'value' => 'remove_gem', 'display' => 'Remove version' },
+          'b' => { 'value' => 'build_gem', 'display' => 'Build new version' },
+          'c' => { 'value' => 'install_gem', 'display' => 'Install new version' },
+          'd' => { 'value' => 'copy_gem', 'display' => 'Copy gem to folder' },
+          'e' => { 'value' => 'push_gem', 'display' => 'Build the latest version and push the gem' },
+          'f' => { 'value' => 'till_install', 'display' => 'Remove old version, build and install the new version' },
+          'g' => { 'value' => 'till_copy', 'display' => 'Remove old version, build, install and copy the new version' },
           '/' => { 'value' => 'exit', 'display' => 'Exit' }
         }
 
@@ -27,7 +27,7 @@ module InstallGemLocal
 
       rescue StandardError => e
         ap e
-        ap I18n.t('something_wrong')
+        ap 'Something Wrong! Try again!'
       end
     end
   end

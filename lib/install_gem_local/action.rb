@@ -39,7 +39,7 @@ module InstallGemLocal
         end
         options['/'] = { 'value' => 'exit', 'display' => 'Exit' }
         InstallGemLocal::Helper.prompt_options(
-          flash_message: InstallGemLocal::Helper.flash_message(title: I18n.t(:choose_version)),
+          flash_message: InstallGemLocal::Helper.flash_message(title: 'Choose Version'),
           options: options
         )
       end
