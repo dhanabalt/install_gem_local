@@ -22,9 +22,8 @@ module InstallGemLocal
 
         unless selection == 'exit'
           InstallGemLocal::Action.send(selection.to_sym)
-          #InstallGemLocal::Navigation.start
+          # InstallGemLocal::Navigation.start
         end
-
       rescue StandardError => e
         ap e
         ap 'Something Wrong! Try again!'

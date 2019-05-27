@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module InstallGemLocal
   class Helper
     class << self
@@ -7,13 +9,13 @@ module InstallGemLocal
           options: options,
           default_color: color,
           selected_color: selected_color,
-          flash_color: flash_color,
+          flash_color: flash_color
         ).prompt
       end
 
-      def flash_message(title: "")
+      def flash_message(title: '')
         message = <<-STR
-    █████   ███████   █ 
+    █████   ███████   █
       █     ██        █
       █     ██        █
       █     ██  ███   █
@@ -21,7 +23,6 @@ module InstallGemLocal
     █████   ███████   ███████ #{title}
         STR
       end
-
     end
   end
 end

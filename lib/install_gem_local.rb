@@ -14,7 +14,6 @@ Dir[File.join(File.expand_path(__dir__), 'install_gem_local', '**/*.rb')].each {
 
 module InstallGemLocal
   class App < Thor
-
     desc 'methods_description', 'list all methods description'
     def methods_desc
       puts InstallGemLocal::Utilization.show_methods

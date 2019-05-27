@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module InstallGemLocal
   module PushGem
     def push_gem
