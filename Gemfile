@@ -7,3 +7,5 @@ gemspec
 
 # cops
 gem 'rubocop'
+
+gem 'pry'
