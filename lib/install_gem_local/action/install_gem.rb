@@ -7,7 +7,7 @@ module InstallGemLocal
       puts 'Install Gem'.green
       files_exists = file_names
       if files_exists.count > 1
-        install_gem_from_path(multiple_version_selection)
+        install_gem_from_path(multiple_version_selection(title_interpol: 'TO Install'))
       elsif files_exists.count == 1
         install_gem_from_path(files_exists.first)
       else

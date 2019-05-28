@@ -22,7 +22,7 @@ module InstallGemLocal
       files_exists = file_names
 
       if files_exists.count > 1
-        copy_file_to_path(multiple_version_selection)
+        copy_file_to_path(multiple_version_selection(title_interpol: 'TO Copy'))
       elsif files_exists.count == 1
         copy_file_to_path(files_exists.first)
       else

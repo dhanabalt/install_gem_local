@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['vel.dhanabal@gmail.com']
 
   spec.summary       = 'install the gem in my local'
-  spec.description   = 'to build and install the gem in my local'
+  spec.description   = 'to build and install the gem in your local'
   spec.homepage      = 'https://github.com/dhanabalt/install_gem_local'
   spec.license       = 'MIT'
 

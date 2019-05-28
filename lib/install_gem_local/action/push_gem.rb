@@ -8,7 +8,7 @@ module InstallGemLocal
       puts 'Push Gem'.blue
       files_exists = file_names
       if files_exists.count > 1
-        push_gem_from_path(multiple_version_selection)
+        push_gem_from_path(multiple_version_selection(title_interpol: 'TO Push'))
       elsif files_exists.count == 1
         push_gem_from_path(files_exists.first)
       else

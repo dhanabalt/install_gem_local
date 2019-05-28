@@ -31,7 +31,7 @@ module InstallGemLocal
         file.entries
       end
 
-      def multiple_version_selection(include_all: false)
+      def multiple_version_selection(include_all: false, title_interpol: '')
         options =
           include_all ? { '*' => { 'value' => 'all', 'display' => 'All Versions' } } : {}
         file_names.each_with_index do |file_name, index|
@@ -39,7 +39,7 @@ module InstallGemLocal
         end
         options['/'] = { 'value' => 'exit', 'display' => 'Exit' }
         InstallGemLocal::Helper.prompt_options(
-          flash_message: InstallGemLocal::Helper.flash_message(title: 'Choose Version'),
+          flash_message: InstallGemLocal::Helper.flash_message(title: "Choose Version #{title_interpol}"),
           options: options
         )
       end
