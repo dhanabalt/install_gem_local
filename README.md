@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/dhanabalt/install_gem_local/master/assets/images/igl.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
