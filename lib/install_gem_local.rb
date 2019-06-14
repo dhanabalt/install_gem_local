@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-%w[thor downup awesome_print tty-command pry].each { |f| require f }
+%w[thor downup awesome_print tty-command].each { |f| require f }
 
 # TODO: refactor these code later
 Dir[File.join(File.expand_path(__dir__), 'install_gem_local', 'action/*.rb')].each { |f| require f }
